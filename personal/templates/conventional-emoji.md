@@ -27,6 +27,7 @@ El `scope` es opcional y debe indicar la sección afectada.
 | `style` | 🎨 | Cambiar formato o estilos |
 | `refactor` | ♻️ | Reestructurar código sin cambiar su comportamiento |
 | `perf` | ⚡ | Mejorar el rendimiento |
+| `a11y` | ♿ | Mejorar la accesibilidad |
 | `test` | ✅ | Añadir o modificar pruebas |
 | `build` | 📦 | Modificar dependencias o procesos de compilación |
 | `ci` | 👷 | Modificar automatizaciones o pipelines |
