@@ -68,7 +68,10 @@
         <span class="header__brand-text">Bridge Collective</span>
       </a>
       <button
-        class="header__menu-button--open"
+        class="header__menu-button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
         type="button"
       >
         <img
@@ -121,7 +124,7 @@
   </footer>
 
   <!-- Menu panel — hidden until the hamburger is activated -->
-  <nav class="navbar">
+  <nav id="main-navigation" class="navbar">
     <ul class="navbar__list">
       <li class="navbar__item">
         <a
