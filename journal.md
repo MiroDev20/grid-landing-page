@@ -17,26 +17,26 @@ Explorar el proyecto y ubicarme en el punto de partida.
     <td>
         <a href="https://www.youtube.com/watch?v=wmFg-T-alLk&t=2987s">
             <img
-                src="./personal/assets/images/front-page/grooves-de-otoño-que-sientan-tan-bien.png"
+                src="https://i.ytimg.com/vi/wmFg-T-alLk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAY4TUfnBbrR9Pw0aJTIunsC_HKiw"
                 width="280px"
             >
         </a>
         <div>
             <div>
-                <img src="./personal/assets/images/icons/profiles/oiabreeze.png" width="32px">
+                <img src="https://yt3.googleusercontent.com/CZrv4KDtfbUu4CsOtgp2qaKceo1uDFGugFWnSxzP1Of_Bj7P76oZN5amQcsavv1a3W1YGIgxAA=s160-c-k-c0x00ffffff-no-rj" width="32px">
                 <span>oiabreeze</span>
             </div>
             <p><i>Grooves de otoño que sientan tan bien<br>🍂🎧 | Cozy Chill Pop · Jazzhop & Lofi<br>· Café · Focus · BGM </i></p>
             <ul>
                <li>
                     <a href="https://www.youtube.com/@oiabreeze/featured">
-                        <img src="./personal/assets/images/icons/logos/youtube.png" width="16px">
+                        <img src="https://images.icon-icons.com/2699/PNG/512/youtube_logo_icon_168737.png" width="16px">
                         <span>YouTube</span>
                     </a>
                 </li>
                <li>
                     <a href="https://open.spotify.com/intl-es/artist/7MDZDPiL6AGmcZvgqqOFxd">
-                        <img src="./personal/assets/images/icons/logos/spotify.png" width="16px">
+                        <img src="https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcTGVLfQUI48k8KKCMwUjD3KyEUROiRSiLzDmmf8hgtwe8HzSO843p2fwuWlPYudjeGnfYWVJ1bYp1hF2CxSRlsNOqLyb4G7wl4aBDBXsG0LP5Og_rEr" width="16px">
                         <span>Spotify</span>
                     </a>
                 </li>
@@ -107,26 +107,26 @@ Open Graph.
     <td>
         <a href="https://www.youtube.com/watch?v=wmFg-T-alLk&t=2987s">
             <img
-                src="./personal/assets/images/front-page/grooves-de-otoño-que-sientan-tan-bien.png"
+                src="https://i.ytimg.com/vi/wmFg-T-alLk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAY4TUfnBbrR9Pw0aJTIunsC_HKiw"
                 width="280px"
             >
         </a>
         <div>
             <div>
-                <img src="./personal/assets/images/icons/profiles/oiabreeze.png" width="32px">
+                <img src="https://yt3.googleusercontent.com/CZrv4KDtfbUu4CsOtgp2qaKceo1uDFGugFWnSxzP1Of_Bj7P76oZN5amQcsavv1a3W1YGIgxAA=s160-c-k-c0x00ffffff-no-rj" width="32px">
                 <span>oiabreeze</span>
             </div>
             <p><i>Grooves de otoño que sientan tan bien<br>🍂🎧 | Cozy Chill Pop · Jazzhop & Lofi<br>· Café · Focus · BGM </i></p>
             <ul>
                <li>
                     <a href="https://www.youtube.com/@oiabreeze/featured">
-                        <img src="./personal/assets/images/icons/logos/youtube.png" width="16px">
+                        <img src="https://images.icon-icons.com/2699/PNG/512/youtube_logo_icon_168737.png" width="16px">
                         <span>YouTube</span>
                     </a>
                 </li>
                <li>
                     <a href="https://open.spotify.com/intl-es/artist/7MDZDPiL6AGmcZvgqqOFxd">
-                        <img src="./personal/assets/images/icons/logos/spotify.png" width="16px">
+                        <img src="https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcTGVLfQUI48k8KKCMwUjD3KyEUROiRSiLzDmmf8hgtwe8HzSO843p2fwuWlPYudjeGnfYWVJ1bYp1hF2CxSRlsNOqLyb4G7wl4aBDBXsG0LP5Og_rEr" width="16px">
                         <span>Spotify</span>
                     </a>
                 </li>
@@ -223,7 +223,7 @@ Lo misma pasa con el contenido de mi hero section.
             <ul>
                <li>
                     <a href="1940's calm night in the autumn with relaxing vintage oldies playing in another room (cricket asmr)">
-                        <img src="./personal/assets/images/icons/logos/youtube.png" width="16px">
+                        <img src="https://images.icon-icons.com/2699/PNG/512/youtube_logo_icon_168737.png" width="16px">
                         <span>YouTube</span>
                     </a>
                 </li>
@@ -254,8 +254,8 @@ flowchart TD
     E --> B{¿Está presente la clase `--open?`}
     B -- Sí --> C[Mostrar menú]
     B -- No --> D[Cerrar menú]
-classDef css fill: #8ab8ef
-classDef js fill: #d4f363
+classDef css fill: #8ab8ef, color: #111111
+classDef js fill: #d4f363, color: #111111
 class C css
 class D css
 class E,B js
