@@ -182,5 +182,81 @@ Lo misma pasa con el contenido de mi hero section.
 
 ### 👣 Próximos pasos
 
-- Crear la interacción del menú hamburguesa con JavaScript.
+- ~~Crear la interacción del menú hamburguesa con JavaScript.~~
 - Comenzar a escribir los estilos CSS siguiendo las clases creadas con *BEM*.
+
+## 📅 28 de septiembre de 2026 — Optimización de la lógica y maquetación con CSS Grid
+
+### 🎯 Objetivo
+
+- Revisar la lógica y explicarla.
+- Organizar las partes de la página con CSS Grid, siguiendo el diseño de referencia.
+- Comprobar que la distribución se adapte correctamente a distintos tamaños de pantalla.
+
+### 🎧 Lo que escuché
+
+<table>
+    <td>
+        <a href="https://www.youtube.com/watch?v=upsoP4bl5J0">
+            <img
+                src="https://i.ytimg.com/vi/upsoP4bl5J0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDzEdo0E7drPCHWVVUB68M-eaanew"
+                width="280px"
+                alt="portada"
+            >
+        </a>
+        <div>
+            <div>
+                <img
+                    src="https://yt3.ggpht.com/50uChumsI4iQjdKpp70o5Sh1SvFcMU2Xa58QW49msqZSVKuqeAFMmZ6lhoEgq8raixXkgc2p=s88-c-k-c0x00ffffff-no-rj"
+                    width="32px"
+                    alt="perfil"
+                >
+                <span>Oldies Station</span>
+            </div>
+            <p>
+                <i>
+                    1940's calm night in the autumn with<br>
+                    relaxing vintage oldies playing in<br>
+                    another room (cricket asmr)
+                </i>
+            </p>
+            <ul>
+               <li>
+                    <a href="1940's calm night in the autumn with relaxing vintage oldies playing in another room (cricket asmr)">
+                        <img src="./personal/assets/images/icons/logos/youtube.png" width="16px">
+                        <span>YouTube</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</table>
+
+### 🛠️ Trabajo realizado
+
+- Implementación de la interacción del menú: alternancia de la clase del botón y
+    actualización de aria-expanded. El CSS muestra u oculta la navegación y los iconos.
+
+### 🧠 Lo que aprendí
+
+- Aprendí que JavaScript puede añadir o quitar clases de un elemento con `classList.toggle()`.
+    Después, CSS aplica los estilos correspondientes a cada estado.
+- También aprendí que `aria-expanded` comunica si la navegación está abierta o cerrada.
+
+#### Flujo de la lógica
+
+- 🟡 Responsabilidad de JavaScript
+- 🔵 Responsabilidad de CSS
+
+```mermaid
+flowchart TD
+    A([Click al botón]) --> E[Alternar clase `--open`]
+    E --> B{¿Está presente la clase `--open?`}
+    B -- Sí --> C[Mostrar menú]
+    B -- No --> D[Cerrar menú]
+classDef css fill: #8ab8ef
+classDef js fill: #d4f363
+class C css
+class D css
+class E,B js
+```

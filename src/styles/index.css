@@ -1,0 +1,14 @@
+.navbar,
+.header__close-icon
+{
+    display: none;
+}
+
+.header__menu-button--open .header__menu-icon {
+    display: none;
+}
+
+.header__menu-button--open + .navbar,
+.header__menu-button--open .header__close-icon {
+    display: flex;
+}
