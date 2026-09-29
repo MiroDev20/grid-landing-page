@@ -67,6 +67,7 @@ body {
         "hero"
         "footer"
     ;
+    grid-template-rows: 70px auto 70px;
 
     min-height: 100vh;
 
@@ -86,15 +87,11 @@ body {
     padding: 36px 26px;
 }
 
-.hero__stat {
-    padding: 16px 26px;
-}
-
 .header {
     grid-area: header;
     display: flex;
     justify-content: space-between;
-    height: 70px;
+    /* height: 70px; */
 }
 
 .header__brand {
@@ -133,6 +130,8 @@ body {
         "desc desc"
     ;
     grid-template-rows: 200px 20px 20px;
+
+    padding: 16px 26px;
 }
 
 .hero__stat-icon {
@@ -157,5 +156,86 @@ body {
 
 .footer {
     grid-area: footer;
-    padding:18px 26px;
+    padding: 16px 26px;
+}
+
+@media (min-width: 375px) {
+    .header {
+        padding-left: 50px;
+    }
+
+    .footer {
+        padding-left: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-areas:
+            "presentation stats"
+        ;
+        grid-template-columns: 48% 52%;
+    }
+
+    .hero__presentation {
+        grid-area: presentation;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        padding-left: 50px;
+    }
+
+    .hero__title {
+        font-size: 4rem;
+        width: 450px;
+        line-height: 70px;
+    }
+
+    .hero__description {
+        width: 400px;
+        line-height: 32px;
+    }
+
+    .hero__stat {
+        grid-template-rows: 280px 20px 20px;
+    }
+
+    .hero__stats {
+        grid-area: stats;
+    }
+
+    .hero__stats-list {
+        display: grid;
+        grid-template-areas:
+            "students schools"
+            "teachers graduations"
+        ;
+        height: 100%;
+    }
+
+    .hero__stats-list > .hero__stat {
+        border: none;
+    }
+
+    .hero__stats-list > .hero__stat {
+        border-left: 1.6px solid rgba(255, 255, 255, 0.26);
+        border-bottom: 1.6px solid rgba(255, 255, 255, 0.26);
+    }
+
+    .hero__stats-list > .hero__stat:nth-child(1) {
+        grid-area: students;
+    }
+    .hero__stats-list > .hero__stat:nth-child(2) {
+        grid-area: schools;
+    }
+    .hero__stats-list > .hero__stat:nth-child(3) {
+        grid-area: teachers;
+    }
+    .hero__stats-list > .hero__stat:nth-child(4) {
+        grid-area: graduations;
+    }
 }
