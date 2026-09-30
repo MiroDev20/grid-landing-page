@@ -260,3 +260,93 @@ class C css
 class D css
 class E,B js
 ```
+
+## 📅 29 de septiembre de 2026 — Maquetación responsive del hero y las estadísticas
+
+### 🎯 Objetivo
+
+Adaptar la distribución del hero y sus estadísticas a pantallas móviles y
+anchas, siguiendo el diseño de referencia.
+
+### 🎧 Lo que escuché
+
+<table>
+    <td>
+        <a href="https://www.youtube.com/watch?v=FNuU-_NKGS4&t=1936s">
+            <img
+                src="https://i.ytimg.com/vi/FNuU-_NKGS4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBzzWlNBHFsCM-zAnpvF7xUhYxX_w"
+                width="280px"
+                alt="portada"
+            >
+        </a>
+        <div>
+            <div>
+                <img
+                    src="https://yt3.googleusercontent.com/Kmr-QvIWCBdzfmhIQ_sPnOirNrFLGg6d9wCmwBwNjcZ93bwwZD4tb9afObuhAJd5_PFp35-jzg=s120-c-k-c0x00ffffff-no-rj"
+                    width="32px"
+                    alt="perfil"
+                >
+                <span>mocha.</span>
+            </div>
+            <p>
+                <i>pumpkin cat.</i>
+            </p>
+            <ul>
+               <li>
+                    <a href="music.apple.com/us/artist/mocha/1817615388">
+                        <img src="https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcR0NXfQO7I81Sxe-HdfBIK4M8FdOAi_cMH5Awx11X1zvYs0nSmJwdFk5NZrfeYFdzgWTVcIO8OfacL3khYul_ZTaFVT-Gla27jO3PHtUvVYu234s9o" width="16px">
+                        <span>Apple Music</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="open.spotify.com/artist/5qCVMR70Et7SfFRFPSLHIV">
+                        <img src="https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcTGVLfQUI48k8KKCMwUjD3KyEUROiRSiLzDmmf8hgtwe8HzSO843p2fwuWlPYudjeGnfYWVJ1bYp1hF2CxSRlsNOqLyb4G7wl4aBDBXsG0LP5Og_rEr" width="16px">
+                        <span>Spotify</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</table>
+
+### 🛠️ Trabajo realizado
+
+- Añadí estilos globales para normalizar los elementos, cargué la fuente Inter y
+    definí los estilos base de la página.
+- Organicé el header, el hero y el footer con CSS Grid, y distribuí cada
+    estadística usando áreas de grid para ubicar su icono, valor, etiqueta y
+    descripción.
+- Preparé una disposición móvil en una columna y, desde el breakpoint de
+    375 px, distribuí el hero en dos columnas y las estadísticas en una cuadrícula
+    de dos por dos.
+- Unifiqué la estructura de los iconos de las estadísticas para poder
+    posicionarlos de forma consistente con CSS Grid.
+
+### 🧠 Lo que aprendí
+
+Aprendí a combinar CSS Grid con `grid-template-areas` y una media query para
+cambiar la distribución según el ancho de pantalla. También entendí que
+`grid-area` solo ubica un elemento dentro del grid de su contenedor; no lo mueve
+a otro contenedor. Como la navbar está dentro del header y la presentación está
+dentro del hero, asignarle `grid-area: hero` no la coloca dentro de
+`.hero__presentation`.
+
+Además, los iconos decorativos pueden llevar `alt=""` para que los lectores de
+pantalla los ignoren.
+
+### 🚧 Dificultades
+
+Quise ubicar la navbar abierta en la zona de `.hero__presentation` usando
+`grid-area`, pero la navbar y la presentación pertenecen a contenedores distintos.
+
+### ✅ Resultado
+
+La página ya cuenta con una base móvil y una distribución alternativa para
+pantallas más anchas. Las cuatro estadísticas tienen una estructura uniforme y
+se organizan en una cuadrícula de dos por dos a partir del breakpoint definido.
+
+### 👣 Próximos pasos
+
+- Definir y comprobar la posición de la navbar cuando se abre.
+- Revisar el diseño en distintos anchos de pantalla y ajustar el breakpoint si
+    hace falta.
