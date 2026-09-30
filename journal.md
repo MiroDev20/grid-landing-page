@@ -347,6 +347,100 @@ se organizan en una cuadrícula de dos por dos a partir del breakpoint definido.
 
 ### 👣 Próximos pasos
 
-- Definir y comprobar la posición de la navbar cuando se abre.
-- Revisar el diseño en distintos anchos de pantalla y ajustar el breakpoint si
-    hace falta.
+- ~~Definir y comprobar la posición de la navbar cuando se abre.~~
+- ~~Revisar el diseño en distintos anchos de pantalla y ajustar el breakpoint si
+    hace falta.~~
+
+## 📅 30 de septiembre de 2026 — Disposición de la navbar en desktop
+
+### 🎯 Objetivo
+
+Alinear la navbar en la sección stats, segunda columna, cuando se vea en pantallas grandes.
+
+### 🎧 Lo que escuché
+
+<table>
+    <td>
+        <a href="https://www.youtube.com/watch?v=xXkhh9rtP0o&list=OLAK5uy_kI6DsXzb4cHtHleV_o66sgfsIyuDsybCQ&index=12">
+            <img
+                src="https://i9.ytimg.com/s_p/OLAK5uy_kI6DsXzb4cHtHleV_o66sgfsIyuDsybCQ/maxresdefault.jpg?sqp=CLiR9tUGir7X7AMICIDmj84GEAE=&rs=AOn4CLCOr70x3WSlyt18Bpw6BKjvZsLNWg&v=1774449408"
+                width="280px"
+                alt="portada"
+            >
+        </a>
+        <div>
+            <div>
+                <img
+                    src="https://yt3.googleusercontent.com/GyVPysrx-cVIWIQDfi2MkaYr7oRIxuOgGeZihnw-hgTv6E5LBQ67v5yXTFvqP2Bl7BB_S-0L-A=s160-c-k-c0x00ffffff-no-rj"
+                    width="32px"
+                    alt="perfil"
+                >
+                <span>Lofi Girl</span>
+            </div>
+            <p>
+                <i>Lofi Girl x The Sims - cozy music to feel<br>ooh be gah!</i>
+            </p>
+            <ul>
+               <li>
+                    <a href="open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM">
+                        <img src="https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcTGVLfQUI48k8KKCMwUjD3KyEUROiRSiLzDmmf8hgtwe8HzSO843p2fwuWlPYudjeGnfYWVJ1bYp1hF2CxSRlsNOqLyb4G7wl4aBDBXsG0LP5Og_rEr" width="16px">
+                        <span>Spotify</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://music.apple.com/fr/playlist/lofi-girl-beats-to-relax-study-to/pl.u-2aoq8mqiGo7J6A0">
+                        <img src="https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcR0NXfQO7I81Sxe-HdfBIK4M8FdOAi_cMH5Awx11X1zvYs0nSmJwdFk5NZrfeYFdzgWTVcIO8OfacL3khYul_ZTaFVT-Gla27jO3PHtUvVYu234s9o" width="16px">
+                        <span>Apple Music</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="www.youtube.com/@LofiGirl">
+                        <img src="https://images.icon-icons.com/2699/PNG/512/youtube_logo_icon_168737.png" width="16px">
+                        <span>YouTube</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</table>
+
+### 🛠️ Trabajo realizado
+
+- Ajusté la posición de la navbar en la vista desktop para que quedara alineada
+    en la segunda columna de la sección de estadísticas.
+- Revisé la estructura de los contenedores y confirmé que la navbar no pertenecía
+    al mismo grid que la presentación del hero.
+
+### 🧠 Lo que aprendí
+
+#### Para elementos en una rejilla (grid elements)
+
+- `align-self`: alineación en el eje `Y`
+- `justify-self`: alineación en el eje `X`
+- `place-self`: equivalente a los dos anteriores
+
+También aprendí que el problema no era que la navbar estuviera mal estructurada,
+sino que estaba dentro de un contenedor distinto al que estaba aplicando el layout.
+Eso me hizo entender mejor que `grid-area` solo funciona dentro del grid del
+contenedor padre.
+
+### 🚧 Dificultades
+
+Intenté mover la navbar usando `grid-area` desde la clase del nav, pero como estaba
+dentro del `header` y no dentro de `.hero__presentation`, ese ajuste no tenía efecto.
+Después me di cuenta de que debía modificar la posición desde el contenedor que sí
+definía la rejilla.
+
+Lo resolví revisando la jerarquía HTML y ajustando la alineación con propiedades de
+grid en el elemento correcto. En otras palabras, el problema no estaba tanto en la
+navegación como en el contenedor que la estaba organizando.
+
+### ✅ Resultado
+
+La navbar quedó bien colocada en desktop y la página mantiene una distribución más
+clara y consistente en pantallas grandes. La estructura del layout se ve más ordenada
+y el diseño se acerca mejor a la referencia visual.
+
+### 👣 Próximos pasos
+
+- Revisar el comportamiento del menú cuando está abierto y cerrado.
