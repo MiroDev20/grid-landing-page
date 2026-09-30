@@ -116,7 +116,7 @@ body {
     align-items: center;
     text-align: center;
     line-height: 36px;
-    border-bottom: 1.6px solid rgba(255, 255, 255, 0.26);
+    border-bottom: 1.2px solid rgba(255, 255, 255, 0.26);
 }
 
 .hero {
@@ -227,6 +227,7 @@ body {
             "students schools"
             "teachers graduations"
         ;
+        grid-template-columns: 50% 50%;
         height: 100%;
     }
 
@@ -250,5 +251,22 @@ body {
     }
     .hero__stats-list > .hero__stat:nth-child(4) {
         grid-area: graduations;
+    }
+
+    .navbar--open {
+        grid-area: stats;
+        width: 50%;
+        justify-self: self-end;
+        height: 100%;
+        border-left: 1.6px solid rgba(255, 255, 255, 0.26);
+        border-bottom: 1.6px solid rgba(255, 255, 255, 0.26);
+        justify-content: end;
+        align-items: start;
+        font-size: 1.9rem;
+        line-height: 50px;
+        padding-right: 48px;
+        padding-top: 40px;
+        font-weight: bold;
+        text-align: end;
     }
 }
