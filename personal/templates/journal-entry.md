@@ -62,6 +62,12 @@
                         <span>X</span>
                     </a>
                 </li>
+                <li>
+                    <a href="">
+                        <img src="https://encrypted-tbn1.gstatic.com/favicon-tbn?q=tbn:ANd9GcTRQW05cYBsUupNkHHbDzteqLlw2dL12KbWHOzTVjx-ADD9PAXcg8e2OFM3BuLRZTfr_C7uXDn6KyCa0c8lYseC7zuES59DKhD9Wp5G--2rvcUA-g" width="16px">
+                        <span>Sound Cloud</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </td>

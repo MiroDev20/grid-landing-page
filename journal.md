@@ -183,7 +183,7 @@ Lo misma pasa con el contenido de mi hero section.
 ### 👣 Próximos pasos
 
 - ~~Crear la interacción del menú hamburguesa con JavaScript.~~
-- Comenzar a escribir los estilos CSS siguiendo las clases creadas con *BEM*.
+- ~~Comenzar a escribir los estilos CSS siguiendo las clases creadas con *BEM*.~~
 
 ## 📅 28 de septiembre de 2026 — Optimización de la lógica y maquetación con CSS Grid
 
@@ -443,4 +443,107 @@ y el diseño se acerca mejor a la referencia visual.
 
 ### 👣 Próximos pasos
 
-- Revisar el comportamiento del menú cuando está abierto y cerrado.
+- ~~Revisar el comportamiento del menú cuando está abierto y cerrado.~~
+
+## 📅 1 de octubre de 2026 — Efectos con `:hover` y overlay
+
+### 🎯 Objetivo
+
+Añadir los efectos con el pseudoestado `:hover` y la overlay para cuando se abre el menú.
+
+### 🎧 Lo que escuché
+
+<table>
+    <td>
+        <a href="https://www.youtube.com/watch?v=v602xofDq7E">
+            <img
+                src="https://i.ytimg.com/vi/v602xofDq7E/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAh5ick-FzahXfROrGC-WoeViOdHA"
+                width="280px"
+                alt="portada">
+        </a>
+        <div>
+            <div>
+                <img
+                    src="https://yt3.googleusercontent.com/xHar-3rbJCrOhAqI1kv4EqMxhDhLILHpn84yeUnVQSy76t2NClORvSaiC1ClK6KWYRJzaOgfIg=s160-c-k-c0x00ffffff-no-rj"
+                    width="32px"
+                    alt="perfil">
+                <span>chill chill journal</span>
+            </div>
+            <p>
+                <i>What You Start Today Can Bloom<br>Tomorrow 📚 Deep Focus | Jazz LoFi<br>for Productivity</i>
+            </p>
+            <ul>
+                <li>
+                    <a href="music.apple.com/jp/artist/chill-chill-journal/1764660598">
+                        <img src="https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcR0NXfQO7I81Sxe-HdfBIK4M8FdOAi_cMH5Awx11X1zvYs0nSmJwdFk5NZrfeYFdzgWTVcIO8OfacL3khYul_ZTaFVT-Gla27jO3PHtUvVYu234s9o" width="16px">
+                        <span>Apple Music</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://open.spotify.com/intl-es/artist/3IFUUX4omNlVlwhaVSpLpF">
+                        <img src="https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcTGVLfQUI48k8KKCMwUjD3KyEUROiRSiLzDmmf8hgtwe8HzSO843p2fwuWlPYudjeGnfYWVJ1bYp1hF2CxSRlsNOqLyb4G7wl4aBDBXsG0LP5Og_rEr" width="16px">
+                        <span>Spotify</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://images.icon-icons.com/2699/PNG/512/youtube_logo_icon_168737.png" width="16px">
+                        <span>YouTube</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</table>
+
+### 🛠️ Trabajo realizado
+
+- Añadí los estados con `:hover` para los elementos de la navbar y las
+    estadísticas.
+- Creé un elemento `div` y en `src/logic/index.js` lo programé para opacar
+    el contenido de la hero section cuando la navbar se abre.
+
+### 🧠 Lo que aprendí
+
+Aprendí que un elemento con position: absolute puede provocar desbordamiento
+visual aunque no ocupe espacio en el flujo normal del documento. También
+aprendí a revisar cómo se combinan top y height, porque top: 70px junto
+con height: 100% supera el alto disponible.
+
+### 🚧 Dificultades
+
+![desbordamiento](./personal/assets/desbordamiento.png)
+![background](./personal/assets/header-without-background.png)
+
+Al principio pensé que el espacio sobrante estaba relacionado con la altura
+o la posición de la navbar. Sin embargo, el problema venía del overlay.
+El overlay tenía top: 70px para empezar debajo del header y, al mismo tiempo,
+height: 100%. Al combinar ambas propiedades, su altura total se extendía 70px
+más allá de su contenedor, lo que generaba desbordamiento vertical y hacía visible
+un espacio adicional al final de la página.
+
+También noté que, como el header no tenía un color de fondo propio, podía verse
+el overlay detrás de él. Al ajustar el overlay, el espacio sobrante desapareció
+y la navbar abierta quedó superpuesta correctamente sobre el footer.
+
+### ✅ Resultado
+
+- La navbar muestra una capa semitransparente sobre el contenido cuando se abre,
+    mientras el fondo opaco del header evita que el overlay se vea a través de él.
+- Quité el desplazamiento `top: 70px` del overlay, que junto con `height: 100%`
+    provocaba desbordamiento vertical. La navbar abierta puede superponerse hasta
+    el footer sin dejar espacio adicional al final de la página.
+- Los enlaces de la navbar y las estadísticas tienen efectos `:hover`.
+
+### 👣 Próximos pasos
+
+- Comparar la página con las referencias de móvil y escritorio y la guía: tamaños
+    de pantalla de 320 px a más, tipografía, colores, divisores, menú abierto y
+estados :hover y :focus. Por ejemplo, la guía pide overlay negro al 25 % y que
+todos los elementos interactivos tengan estados de foco.
+- Revisar la lógica JavaScript del menú, incluyendo su uso con teclado y el estado
+    de `aria-expanded`.
+- Definir una estructura ligera basada en Screaming Architecture, organizada por
+    áreas funcionales, y modularizar el HTML y el CSS donde aporte claridad.
+- Comprobar los cambios frente a los diseños de referencia y ajustar los detalles
+    de responsive, tipografía, color y espaciado.
