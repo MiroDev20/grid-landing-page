@@ -537,13 +537,93 @@ y la navbar abierta quedó superpuesta correctamente sobre el footer.
 
 ### 👣 Próximos pasos
 
-- Comparar la página con las referencias de móvil y escritorio y la guía: tamaños
+- ~~Comparar la página con las referencias de móvil y escritorio y la guía: tamaños
     de pantalla de 320 px a más, tipografía, colores, divisores, menú abierto y
 estados :hover y :focus. Por ejemplo, la guía pide overlay negro al 25 % y que
-todos los elementos interactivos tengan estados de foco.
-- Revisar la lógica JavaScript del menú, incluyendo su uso con teclado y el estado
-    de `aria-expanded`.
-- Definir una estructura ligera basada en Screaming Architecture, organizada por
-    áreas funcionales, y modularizar el HTML y el CSS donde aporte claridad.
-- Comprobar los cambios frente a los diseños de referencia y ajustar los detalles
-    de responsive, tipografía, color y espaciado.
+todos los elementos interactivos tengan estados de foco.~~
+- ~~Revisar la lógica JavaScript del menú, incluyendo su uso con teclado y el estado
+    de `aria-expanded`.~~
+- ~~Comprobar los cambios frente a los diseños de referencia y ajustar los detalles
+    de responsive, tipografía, color y espaciado.~~
+
+## 📅 7 de octubre de 2026 — Revisiones finales
+
+### 🎯 Objetivo
+
+Ajustar detalles y modularizar CSS.
+
+### 🎧 Lo que escuché
+
+<table>
+    <td>
+        <a href="https://www.youtube.com/watch?v=WcRdqszYprI">
+            <img
+                src="https://i.ytimg.com/vi/WcRdqszYprI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCQISSE_LeZ_EThFrm13a1Drg1Ohg"
+                width="280px"
+                alt="portada">
+        </a>
+        <div>
+            <div>
+                <img
+                    src="https://yt3.googleusercontent.com/w0ebunYKWAm2KFcMgTdKSgJitOTMAcfWdIrBxbj5LMVkAd139OlGnB1nWoIt-3AX3HHfQDgfeGo=s160-c-k-c0x00ffffff-no-rj"
+                    width="32px"
+                    alt="perfil">
+                <span>Snoopy Corner</span>
+            </div>
+            <p>
+                <i>Cozy Halloween Jazz Vibes with Snoopy<br>👻🍂 Relaxing Music for Spooky Nights</i>
+            </p>
+            <ul>
+                <li>
+                    <a href="www.youtube.com/@SnoopyCornerJazz">
+                        <img src="https://images.icon-icons.com/2699/PNG/512/youtube_logo_icon_168737.png" width="16px">
+                        <span>YouTube</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</table>
+
+### 🛠️ Trabajo realizado
+
+- Separé los estilos en archivos por responsabilidad: `header`, `main`,
+    `footer`, `navbar` y `overlay`. El archivo `index.css` quedó como punto de
+    entrada para importarlos y conservar los estilos globales.
+- Añadí las variables CSS de la guía para los colores principales. Así evito repetir valores
+    de color y puedo identificarlos mejor al hacer ajustes visuales.
+- Detecté dos pequeñas oportunidades de limpieza: una declaración de `padding`
+    repetida en el footer y reglas consecutivas que se pueden agrupar en las
+    tarjetas de estadísticas.
+
+### 🧠 Lo que aprendí
+
+Aprendí que modularizar CSS no significa crear un archivo por cada regla. Tiene
+sentido separar un archivo cuando representa una parte reconocible de la página,
+como el header o la navegación. Para una landing pequeña, demasiados módulos
+también pueden dificultar encontrar un estilo.
+
+También repasé que las variables CSS (`--nombre-de-variable`) sirven para
+guardar valores reutilizables, como colores. Funcionan como etiquetas para esos
+valores: en vez de recordar un código de color cada vez, puedo usar un nombre
+que explique para qué se utiliza.
+
+### 🚧 Dificultades
+
+Tuve que decidir cuánta modularización necesitaba realmente el proyecto. Al
+revisar la estructura, vi que los componentes visuales principales justifican
+tener estilos separados, pero no conviene fragmentar más una landing de una sola
+página. Mantener `index.css` como entrada y los estilos globales centralizados
+ayuda a conservar el equilibrio.
+
+### ✅ Resultado
+
+- Los estilos quedaron organizados por áreas de la interfaz y cargados desde un
+    único archivo principal.
+- La página conserva sus estilos globales, la fuente y la distribución general
+    en `index.css`.
+
+### 👣 Próximos pasos
+
+- Revisar la página en móvil y escritorio para comprobar que la separación de
+    estilos no haya cambiado el resultado visual.
