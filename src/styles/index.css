@@ -56,6 +56,7 @@ button {
 }
 
 body {
+    position: relative;
     display: grid;
     grid-template-areas:
         "header"
